@@ -1,26 +1,137 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Generate a Silly Song!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytp-UH-7aE">
+                                <rect key="frame" x="55" y="80" width="210.5" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210.5" id="7P2-p5-anA"/>
+                                    <constraint firstAttribute="height" constant="26.5" id="lov-mA-uaF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-0f-cgp">
+                                <rect key="frame" x="95" y="170" width="130" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="2gQ-SA-vSC"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="aVH-8A-eds"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IAF-Sj-dk8">
+                                <rect key="frame" x="26" y="283" width="268" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="Coq-oD-TWW"/>
+                                    <constraint firstAttribute="width" constant="268" id="vDp-2B-7AX"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29904976784968573" green="0.64269724134139039" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="1eT-bm-fve"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="4xV-7r-bHR"/>
+                            <constraint firstItem="IAF-Sj-dk8" firstAttribute="top" secondItem="Hi5-0f-cgp" secondAttribute="bottom" constant="124" id="5UC-Wb-aUL"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="centerX" secondItem="Ytp-UH-7aE" secondAttribute="centerX" id="6mZ-BN-Uem"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BVD-Rq-gfZ"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dic-57-9kk"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQI-bW-gPb"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="251" id="HTe-au-uq1"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="Mk4-sD-ou2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IAF-Sj-dk8" secondAttribute="bottom" constant="20" id="Mtr-q8-chn"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="N8s-Ng-2fi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hi5-0f-cgp" secondAttribute="trailing" constant="79" id="QzW-XO-a4I"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="SDI-mf-kdr"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SbD-Bj-ZzO"/>
+                            <constraint firstItem="IAF-Sj-dk8" firstAttribute="centerX" secondItem="Hi5-0f-cgp" secondAttribute="centerX" id="T9y-we-yXF"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TuT-lW-BJX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hi5-0f-cgp" secondAttribute="trailing" constant="10" id="VEb-dy-kfi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IAF-Sj-dk8" secondAttribute="trailing" constant="10" id="VMu-uv-b0D"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Vc5-sR-ujj"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="WkR-t7-WTz"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="cfj-GP-Bsa"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="top" secondItem="Ytp-UH-7aE" secondAttribute="bottom" constant="134.5" id="e1B-nL-m5A"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ezl-6b-yxK"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fCG-nr-8dR"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="251" id="hxM-jh-CFk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ytp-UH-7aE" secondAttribute="trailing" constant="10" id="m1k-lf-n4I"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="odW-Xs-GUl"/>
+                            <constraint firstItem="IAF-Sj-dk8" firstAttribute="centerX" secondItem="Ytp-UH-7aE" secondAttribute="centerX" id="oe4-k2-HaW"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="puf-cy-oVg"/>
+                            <constraint firstItem="IAF-Sj-dk8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="qIO-AL-r13"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t5U-6r-Vwr"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="top" secondItem="Ytp-UH-7aE" secondAttribute="bottom" constant="65.5" id="uBC-ll-kZI"/>
+                            <constraint firstItem="Hi5-0f-cgp" firstAttribute="centerX" secondItem="Ytp-UH-7aE" secondAttribute="centerX" id="uNh-05-dFA"/>
+                            <constraint firstItem="IAF-Sj-dk8" firstAttribute="top" secondItem="Hi5-0f-cgp" secondAttribute="bottom" constant="73" id="ukQ-KY-Hh6"/>
+                            <constraint firstItem="Ytp-UH-7aE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="yFK-qu-sxq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1eT-bm-fve"/>
+                                <exclude reference="BVD-Rq-gfZ"/>
+                                <exclude reference="Dic-57-9kk"/>
+                                <exclude reference="HTe-au-uq1"/>
+                                <exclude reference="Mk4-sD-ou2"/>
+                                <exclude reference="SDI-mf-kdr"/>
+                                <exclude reference="SbD-Bj-ZzO"/>
+                                <exclude reference="TuT-lW-BJX"/>
+                                <exclude reference="Vc5-sR-ujj"/>
+                                <exclude reference="cfj-GP-Bsa"/>
+                                <exclude reference="ezl-6b-yxK"/>
+                                <exclude reference="fCG-nr-8dR"/>
+                                <exclude reference="hxM-jh-CFk"/>
+                                <exclude reference="m1k-lf-n4I"/>
+                                <exclude reference="puf-cy-oVg"/>
+                                <exclude reference="t5U-6r-Vwr"/>
+                                <exclude reference="yFK-qu-sxq"/>
+                                <exclude reference="6mZ-BN-Uem"/>
+                                <exclude reference="N8s-Ng-2fi"/>
+                                <exclude reference="VEb-dy-kfi"/>
+                                <exclude reference="e1B-nL-m5A"/>
+                                <exclude reference="uNh-05-dFA"/>
+                                <exclude reference="VMu-uv-b0D"/>
+                                <exclude reference="oe4-k2-HaW"/>
+                                <exclude reference="qIO-AL-r13"/>
+                                <exclude reference="ukQ-KY-Hh6"/>
+                                <exclude reference="Mtr-q8-chn"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="IAF-Sj-dk8" id="0uV-Ju-shR"/>
+                        <outlet property="nameField" destination="Hi5-0f-cgp" id="AGs-Co-zso"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
